@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+
+    <script type="text/babel" >
+        var elems = ["Element1", "Element2", "Element3", "Element4",
+"Element5"];
+var ListeElements = function({elems, color}) {
+return <ul>
+{
+elems.map(function(elem, index) {
+return <li key={index} style={{color:color}}>
+{elem}</li>;
+})
+}
+</ul>
+}
+ReactDOM.render(<ListeElements elems={elems} color="red"/>,
+document.getElementById("app"));
+
+    </script>
+
+
+   
+</html>
